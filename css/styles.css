@@ -251,7 +251,7 @@ body {
     letter-spacing: 0.06em;
 }
 
-.hero-button {
+.modal-btn {
     border: 0;
     border-radius: 4px;
     padding: 10px 32px;
@@ -271,8 +271,8 @@ body {
     transition: background-color var(--transition-time) var(--transiton-function);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.modal-btn:hover,
+.modal-btn:focus {
     background-color: var(--button-accent-color); 
 }
 
@@ -561,7 +561,7 @@ body {
 }
 
 .examples-list-item:hover,
-.examples-list-item:active {
+.examples-list-item:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06),
     0px 1px 1px 0px rgba(0, 0, 0, 0.12);
@@ -754,17 +754,18 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
 
-    transition: opacity var(--transition-time) var(--transiton-function);
+    transition: opacity var(--transition-time) var(--transiton-function),
+    visibility var(--transition-time) var(--transiton-function);
 }
 
-.backdrop.is-hidden {
+/* .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
+} */
 
 .backdrop.is-hidden .modal {
-    transform: translate(50%, 50%) scale(0.8);
+    transform: translate(50%, 50%) scale(1.1);
 }
 
 .modal {
@@ -774,6 +775,7 @@ body {
     height: 581px;
     width: 528px;
     border-radius: 4px;
+    padding: 40px;
 
     background: var(--background-color);
 
@@ -796,6 +798,32 @@ body {
     background-color: var(--background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.modal-title {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15em;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.modal-form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-label {
+    margin-bottom: 4px;
+
+    color: var(--main-text-color);
+    font-size: 12px;
+    line-height: 1.17em;
+    letter-spacing: 0.01em;
+}
+
+
 
 
 /* ============= END BACKDROP ============= */
