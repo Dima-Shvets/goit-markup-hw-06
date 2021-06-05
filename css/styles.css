@@ -696,6 +696,10 @@ body {
     margin-right: 70px;
 }
 
+.footer-social { 
+    margin-right: 93px;
+}
+
 .footer-social-header{
     margin-bottom: 20px;
 
@@ -739,6 +743,63 @@ body {
     fill: var(--background-color);
 }
 
+.footer-form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-form-field {
+    margin-right: 12px;
+}
+
+.footer-form-label-text {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--background-color);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.footer-form-input {
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 16px 15px;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    background-color: rgba(33, 150, 243, 0);
+}
+
+.footer-form-input:placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
+}
+
+.footer-form .modal-btn {
+    display: flex;
+}
+
+.footer-form-btn-text {
+    margin-right: 10px;
+}
+
+.footer-form-btn-icon {
+    fill: var(--background-color);
+}
+
 
 /* ============= END FOOTER ============= */
 
@@ -758,11 +819,11 @@ body {
     visibility var(--transition-time) var(--transiton-function);
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-} */
+}
 
 .backdrop.is-hidden .modal {
     transform: translate(50%, 50%) scale(1.1);
@@ -809,9 +870,17 @@ body {
     color: var(--secondary-text-color);
 }
 
-.modal-form-field {
+.modal-form {
     display: flex;
     flex-direction: column;
+}
+
+.modal-form-field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.modal-form-field:last-child {
+    margin-bottom: 20px;
 }
 
 .modal-form-label {
@@ -821,6 +890,101 @@ body {
     font-size: 12px;
     line-height: 1.17em;
     letter-spacing: 0.01em;
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+}
+
+
+.modal-form-field-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    fill: #212121;
+
+    transition: fill var(--transition-time) var(--transiton-function);
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px; 
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border var(--transition-time) var(--transiton-function);
+}
+
+.modal-form-input:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+.modal-form-input:focus + .modal-form-field-icon {
+    fill: var(--accent-color);
+}
+
+.modal-form-message {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+
+    transition: border var(--transition-time) var(--transiton-function);
+}
+
+.modal-form-message::placeholder {
+    font-size: 14px;
+    line-height: 1.14em;
+    letter-spacing: 0.01em;
+}
+
+.modal-form-message:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+.modal-form-checkbox-field {
+    margin-bottom: 20px;
+}
+
+.modal-form-checkbox-label {
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: 0.03em;
+}
+
+
+.modal-form-checkbox-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 4px;
+    margin-right: 7px;
+}
+
+.modal-form-checkbox-label-link {
+    color: var(--accent-color);
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
+.modal-form-input-checkbox:checked + .modal-form-checkbox-label::before {
+    border: none;
+    background-color: var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+}
+
+.modal-form > .modal-btn {
+    align-self: center;
 }
 
 
