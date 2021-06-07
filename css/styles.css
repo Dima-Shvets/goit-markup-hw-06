@@ -860,6 +860,16 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-close-btn-icon {
+    fill: var(--logo-black-color);
+    transition: fill var(--transition-time) var(--transiton-function);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+    fill:var(--accent-color);
+}
+
 .modal-title {
     margin-bottom: 12px;
 
@@ -968,6 +978,12 @@ body {
     border: 2px solid var(--secondary-text-color);
     border-radius: 4px;
     margin-right: 7px;
+
+    transition: border var(--transition-time) var(--transiton-function);
+}
+
+.modal-form-input-checkbox:focus + .modal-form-checkbox-label::before {
+    border: 2px solid var(--accent-color);
 }
 
 .modal-form-checkbox-label-link {
